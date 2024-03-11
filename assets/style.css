@@ -1,0 +1,250 @@
+body{
+    height:100vh;
+    background-color: rgb(72, 143, 206);
+    display: flex;
+    align-items: center;
+}
+
+.contenedor{
+    width: 1375px;
+    height:600px;
+    margin: 0 auto;
+    position: relative;
+    /* background: url('./images/citiDay.png'); */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+}
+
+/*
+ * FONDO DE LA CIUDAD
+ */
+
+.fondo{
+    width: 200%;
+    height:500px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+}
+
+.fondo-day{
+    background: url('./images/cityDay.png') repeat-x 0px 0px;
+    background-size: 50% 500px;
+}
+
+.fondo-night{
+    background: url('./images/cityNight.png') repeat-x 0px 0px;
+    background-size: 50% 500px;
+}
+
+/*
+ * SUELO
+ */
+
+.suelo {
+    width: 200%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 50px;
+    z-index: 2;
+
+    background: url('./images/iceGround.png') repeat-x 0px 0px;
+    background-size: 50% 50px;
+}
+
+/*
+ * MESSI
+ */
+
+.messi {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 77px;
+    left: 140px;
+    z-index: 2;
+    background: url('./images/messi.png');
+}
+
+.messi-saltando{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 77px;
+    left: 140px;
+    z-index: 2;
+    background: url('./images/Messi_Jump.png');
+}
+
+.messi-corriendo {
+    animation: animarMessi 0.25s steps(6) infinite;
+}
+
+.messi-pecho-frio {
+    background: url('./images/Messi_StunBottom.png');
+}
+
+@keyframes animarMessi {
+    0% {
+        background: url('./images/messi.png');
+    }
+    11.111% {
+        background: url('./images/messi.png');
+    }
+    22.222% {
+        background: url('./images/messi.png');
+    }
+    33.333% {
+        background: url('./images/Messi_Run1.png');
+    }
+    44.444% {
+        background: url('./images/Messi_Run1.png');
+    }
+    55.555% {
+        background: url('./images/Messi_Run1.png'); 
+    }
+    66.666% {
+        background: url('./images/Messi_Run3.png');
+    }
+    77.777% {
+        background: url('./images/Messi_Run3.png');
+    }
+    88.888% {
+        background: url('./images/Messi_Run3.png');
+    }
+    100% {
+        background: url('./images/messi.png');
+    }
+}
+
+
+/*
+ * OBSTACULOS
+ */	
+
+.obstaculo{
+    width: 70px;
+    height: 97px;
+
+    position: absolute;
+    bottom: 80px;
+    left: 600px;
+    z-index: 1;
+
+    background: url('./images/snowman.png') no-repeat;
+}
+
+.obstaculo2{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    bottom: 80px;
+    left: 600px;
+    z-index: 1;
+
+    background: url('./images/iceberg.png') no-repeat;
+}
+
+/*
+ * EFECTO NEON
+ */
+
+ .neon{
+    text-shadow: 0 0 10px rgb(0, 81, 255), /* Agregamos sombra de texto roja */
+                 0 0 20px rgb(0, 81, 255), /* Somos más grande para un efecto de neón */
+                 0 0 30px rgb(0, 81, 255); /* Aumentamos la difuminación para el efecto de neón */
+}
+
+/*
+ * MENU
+ */
+
+#menu {
+    background-color: rgb(131, 182, 230);
+    border: solid;
+    border-width: 1px;
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 30px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(0, 81, 255), /* Agregamos sombra de texto roja */
+                0 0 20px rgb(0, 81, 255), /* Somos más grande para un efecto de neón */
+                0 0 30px rgb(0, 81, 255); /* Aumentamos la difuminación para el efecto de neón */
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 0; 
+    width: 100%; 
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.text-menu{
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-button{
+    color: rgb(255, 255, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #242a5a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    margin:5px;
+    left: 100%;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.text-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*
+ * PUNTUACION
+ */
+.score {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corre Corre Boludo</title>
+    <link rel="icon" href="./assets/images/Messi_Jump.png">
+    <link rel="stylesheet" href="assets/style.css"> 
+    <script src="assets/script.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <h2 class= "neon text-menu">Selecciona un nivel</h2>
+        <button class="neon text-button" onclick="startGame(1)">Nivel 1
+            <span class="tooltip neon">Meta: 20, Velocidad +</span>
+        </button>        
+        <button class="neon text-button"onclick="startGame(2)">Nivel 2
+            <span class="tooltip neon">Meta: 30, Velodidad ++</span>
+        </button>
+        <button class="neon text-button"onclick="startGame(3)">Nivel 3
+            <span class="tooltip neon">Meta: 30, Velocidad+++</span>
+        </button>
+        <button class="neon text-button"onclick="startGame(4)">Nivel 4
+            <span class="tooltip neon">Meta: 30, Velocidad++++</span>
+        </button>
+        <button class="neon text-button" onclick="startGame(5)">Nivel 5
+            <span class="tooltip neon">Meta: 20, Velocidad++++++++</span>
+        </button>
+        <button class="neon text-button" onclick="startGame(0)">Libre
+            <span class="tooltip neon">NO LIMITS</span>
+        </button>
+        <div class= "neon text-button" id="mejorPuntuacion"></div>
+    </div>
+    <div id="gameContainer" class="contenedor">
+        <div class="fondo fondo-day"></div>
+        <div class="suelo"></div>
+        <div class="messi"></div>
+        <div class="score neon">0</div>     
+    </div>
+</body>
+</html>
+
+
+
+ <!-- creditos a repositorio de github https://github.com/GemukiDev/dinosaurio_chrome -->
