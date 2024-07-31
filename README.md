@@ -1,7 +1,11 @@
 # Messi-Game
+
+------
+
 My first web project with which I learned a little to program in javascript. 
 The project is based on the dinosaur game but with Messi
 
+------
 
 ![image](https://github.com/user-attachments/assets/dba3384c-73c4-4d38-af96-2e0eff170067)
 
